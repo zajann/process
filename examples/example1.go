@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/zajann/process"
@@ -16,7 +17,8 @@ func main() {
 	}
 
 	if running {
-		fmt.Println("Process is already Running")
+		fmt.Println("Process is already Running...Exit")
+		os.Exit(0)
 	} else {
 		fmt.Println("Process is not running")
 	}
