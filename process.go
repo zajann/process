@@ -10,7 +10,7 @@ import (
 
 func IsRunning(pidFilePath string) (bool, error) { // 0: not running, 1: running
 	if pidFilePath == "" {
-		return -1, errors.New("process.checkProcessIsRunning(): invalid parmas (may be zero-values)")
+		return false, errors.New("process.checkProcessIsRunning(): invalid parmas (may be zero-values)")
 	}
 
 	if _, err := os.Stat(pidFilePath); err == nil {
