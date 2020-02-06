@@ -5,7 +5,7 @@ A Package to check whether process is already running for Go(golang). `process` 
 ## Installation
 
 ``` bash
-# go get github.com/zajann/process
+$ go get github.com/zajann/process
 ```
 
 ## Usage
