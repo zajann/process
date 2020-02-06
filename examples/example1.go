@@ -8,14 +8,14 @@ import (
 )
 
 func main() {
-	PIDFilePath := "./test.pid"
+	pidFilePath := "./test.pid"
 
-	status, err := process.IsRunning(PIDFilePath)
+	running, err := process.IsRunning(pidFilePath)
 	if err != nil {
 		panic(err)
 	}
 
-	if status == 1 {
+	if running {
 		fmt.Println("Process is already Running")
 	} else {
 		fmt.Println("Process is not running")
@@ -24,5 +24,4 @@ func main() {
 	for {
 		time.Sleep(time.Second)
 	}
-
 }
